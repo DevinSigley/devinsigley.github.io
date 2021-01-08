@@ -13,37 +13,30 @@
     height: 200px;
     background: #13c1b4;
   }
+  .navbar-custom {
+    border-style: none;
+  }
+  .navbar-custom a.nav-link {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    margin-top: 5%;
+  }
+  .navbar-custom a.nav-link.active {
+    background-color: yellow;
+    color: darkorange;
+    border-style: none;
+  }
+  .navbar-custom a.nav-link:hover {
+    background-color: darkgreen;
+    color: darkorange;
+    border-style: none;
+  }
   </style>
 </head>
 <body>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <h1>My First Bootstrap 4 Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>    
-    </ul>
-  </div>  
-</nav>
-
-<div class="container-fluid my-3" style="background: #857752;">
-  <div class="row">
+<div class="container-fluid vh-100 d-flex flex-column" style="background: #857752;">
+  <div class="row flex-grow-1">
     <div class="col-sm-2 text-white" style="background: #13c1b4;">
       <!--
       <h2>About Me</h2>
@@ -53,20 +46,27 @@
       <h3>Some Links</h3>
       <p>Lorem ipsum dolor sit ame.</p>
       -->
-      <div style="background: crimson; border-radius: 50%; align-items: center; justify-content: center; margin-top: 15%;">
+      <div style="background: rgba(255, 255, 255, 0.25); border-radius: 50%; align-items: center; justify-content: center; margin-top: 15%;">
         <img src="images/headshotSquareSmaller.jpg" class="img-fluid" alt="Headshot" style="border-radius: 50%; padding: 5%;">
       </div>
       
       <nav>
-        <div class="nav flex-column nav-tabs" id="nav-tab" role="tablist" style="align-items: center;">
+        <div class="nav flex-column nav-tabs navbar-custom" id="nav-tab" role="tablist" style="align-items: center;">
           <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-          <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+          <a class="nav-link nav-item" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
           <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
         </div>
       </nav>
       
       <hr class="d-sm-none">
     </div>
+
+    <div class="tab-content col-sm-10" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...hehe</div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...hihi</div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...huhu</div>
+    </div>
+    <!--
     <div class="col-sm-10">
       <h2>TITLE HEADING</h2>
       <h5>Title description, Dec 7, 2017</h5>
@@ -80,19 +80,12 @@
       <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
+    -->
   </div>
 </div>
 
 
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...hehe</div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...hihi</div>
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...huhu</div>
-</div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
-  <p>Footer</p>
-</div>
 
 </body>
 </html>
