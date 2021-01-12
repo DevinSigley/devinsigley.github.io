@@ -9,33 +9,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
-  .fakeimg {
-    height: 200px;
-    background: #13c1b4;
-  }
   .navbar-custom {
     border-style: none;
   }
   .navbar-custom a.nav-link {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: x-large;
+    font-feature-settings: "smcp" on;
+    font-weight: bold;
     margin-top: 5%;
+    color: rgba(255, 255, 255, 0.5);
   }
-  .navbar-custom a.nav-link.active {
-    background-color: yellow;
-    color: darkorange;
-    border-style: none;
+  .navbar-custom a.nav-link.active, 
+  .navbar-custom a.nav-link.active:hover {
+    color: rgba(255, 255, 255, 1.0);
+    background-color: #13c1b4;
+    border-color: #13c1b4;
   }
   .navbar-custom a.nav-link:hover {
-    background-color: darkgreen;
-    color: darkorange;
-    border-style: none;
+    color: rgba(255, 255, 255, 0.85);
+    border-color: #13c1b4;
   }
   </style>
 </head>
 <body>
 
-<div class="container-fluid vh-100 d-flex flex-column" style="background: #857752;">
+<div class="container-fluid vh-100 d-flex flex-column" style="background: #f3f3ef;">
   <div class="row flex-grow-1">
     <div class="col-sm-2 text-white" style="background: #13c1b4;">
       <!--
@@ -46,14 +45,14 @@
       <h3>Some Links</h3>
       <p>Lorem ipsum dolor sit ame.</p>
       -->
-      <div style="background: rgba(255, 255, 255, 0.25); border-radius: 50%; align-items: center; justify-content: center; margin-top: 15%;">
+      <div style="background: rgba(255, 255, 255, 0.25); border-radius: 50%; align-items: center; justify-content: center; margin-top: 50%;">
         <img src="images/headshotSquareSmaller.jpg" class="img-fluid" alt="Headshot" style="border-radius: 50%; padding: 5%;">
       </div>
       
       <nav>
         <div class="nav flex-column nav-tabs navbar-custom" id="nav-tab" role="tablist" style="align-items: center;">
-          <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-          <a class="nav-link nav-item" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+          <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">About Me</a>
+          <a class="nav-link nav-item" id="nav-resume-tab" data-toggle="tab" href="#nav-resume" role="tab" aria-controls="nav-resume" aria-selected="false">Resume</a>
           <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
         </div>
       </nav>
@@ -62,9 +61,16 @@
     </div>
 
     <div class="tab-content col-sm-10" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...hehe</div>
-      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...hihi</div>
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...huhu</div>
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <h1 style="margin-top: 25%;">Devin Sigley</h1>
+        wololo
+      </div>
+      <div class="tab-pane fade" id="nav-resume" role="tabpanel" aria-labelledby="nav-resume-tab">
+        ...hihi
+      </div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        ...huhu
+      </div>
     </div>
     <!--
     <div class="col-sm-10">
