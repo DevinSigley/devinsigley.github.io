@@ -10112,3 +10112,16 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.meme-div {
+  display: inline
+}
+
+.meme-img {
+  display: none;
+  position: absolute;
+}
+
+.meme-div:hover ~ .meme-img {
+  display: block;
+}
